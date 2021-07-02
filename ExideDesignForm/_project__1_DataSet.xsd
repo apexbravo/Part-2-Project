@@ -7,7 +7,7 @@
           <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="project__1_ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="project__1_ConnectionString (MySettings)" PropertyReference="ApplicationSettings.ExideDesignForm.My.MySettings.GlobalReference.Default.project__1_ConnectionString" Provider="System.Data.OleDb" />
         </Connections>
         <Tables>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="projectTableAdapter" GeneratorDataComponentClassName="projectTableAdapter" Name="project" UserDataComponentName="projectTableAdapter">
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="project1TableAdapter" GeneratorDataComponentClassName="project1TableAdapter" Name="project1" UserDataComponentName="project1TableAdapter">
             <MainSource>
               <DbSource ConnectionRef="project__1_ConnectionString (MySettings)" DbObjectName="project" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
@@ -110,7 +110,7 @@
   <xs:element name="_project__1_DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="_project__1_DataSet" msprop:Generator_UserDSName="_project__1_DataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="project" msprop:Generator_TableClassName="projectDataTable" msprop:Generator_TableVarName="tableproject" msprop:Generator_TablePropName="project" msprop:Generator_RowDeletingName="projectRowDeleting" msprop:Generator_RowChangingName="projectRowChanging" msprop:Generator_RowEvHandlerName="projectRowChangeEventHandler" msprop:Generator_RowDeletedName="projectRowDeleted" msprop:Generator_UserTableName="project" msprop:Generator_RowChangedName="projectRowChanged" msprop:Generator_RowEvArgName="projectRowChangeEvent" msprop:Generator_RowClassName="projectRow">
+        <xs:element name="project1" msprop:Generator_TableClassName="project1DataTable" msprop:Generator_TableVarName="tableproject1" msprop:Generator_RowChangedName="project1RowChanged" msprop:Generator_TablePropName="project1" msprop:Generator_RowDeletingName="project1RowDeleting" msprop:Generator_RowChangingName="project1RowChanging" msprop:Generator_RowEvHandlerName="project1RowChangeEventHandler" msprop:Generator_RowDeletedName="project1RowDeleted" msprop:Generator_RowClassName="project1Row" msprop:Generator_UserTableName="project1" msprop:Generator_RowEvArgName="project1RowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -140,7 +140,7 @@
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:project" />
+      <xs:selector xpath=".//mstns:project1" />
       <xs:field xpath="mstns:ID" />
     </xs:unique>
   </xs:element>

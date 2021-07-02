@@ -25,7 +25,7 @@ Option Explicit On
 Partial Public Class _project__1_DataSet
     Inherits Global.System.Data.DataSet
     
-    Private tableproject As projectDataTable
+    Private tableproject1 As project1DataTable
     
     Private _schemaSerializationMode As Global.System.Data.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
     
@@ -56,8 +56,8 @@ Partial Public Class _project__1_DataSet
         If (Me.DetermineSchemaSerializationMode(info, context) = Global.System.Data.SchemaSerializationMode.IncludeSchema) Then
             Dim ds As Global.System.Data.DataSet = New Global.System.Data.DataSet()
             ds.ReadXmlSchema(New Global.System.Xml.XmlTextReader(New Global.System.IO.StringReader(strSchema)))
-            If (Not (ds.Tables("project")) Is Nothing) Then
-                MyBase.Tables.Add(New projectDataTable(ds.Tables("project")))
+            If (Not (ds.Tables("project1")) Is Nothing) Then
+                MyBase.Tables.Add(New project1DataTable(ds.Tables("project1")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -80,9 +80,9 @@ Partial Public Class _project__1_DataSet
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
      Global.System.ComponentModel.Browsable(false),  _
      Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
-    Public ReadOnly Property project() As projectDataTable
+    Public ReadOnly Property project1() As project1DataTable
         Get
-            Return Me.tableproject
+            Return Me.tableproject1
         End Get
     End Property
     
@@ -153,8 +153,8 @@ Partial Public Class _project__1_DataSet
             Me.Reset
             Dim ds As Global.System.Data.DataSet = New Global.System.Data.DataSet()
             ds.ReadXml(reader)
-            If (Not (ds.Tables("project")) Is Nothing) Then
-                MyBase.Tables.Add(New projectDataTable(ds.Tables("project")))
+            If (Not (ds.Tables("project1")) Is Nothing) Then
+                MyBase.Tables.Add(New project1DataTable(ds.Tables("project1")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -188,10 +188,10 @@ Partial Public Class _project__1_DataSet
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
     Friend Overloads Sub InitVars(ByVal initTable As Boolean)
-        Me.tableproject = CType(MyBase.Tables("project"),projectDataTable)
+        Me.tableproject1 = CType(MyBase.Tables("project1"),project1DataTable)
         If (initTable = true) Then
-            If (Not (Me.tableproject) Is Nothing) Then
-                Me.tableproject.InitVars
+            If (Not (Me.tableproject1) Is Nothing) Then
+                Me.tableproject1.InitVars
             End If
         End If
     End Sub
@@ -204,13 +204,13 @@ Partial Public Class _project__1_DataSet
         Me.Namespace = "http://tempuri.org/_project__1_DataSet.xsd"
         Me.EnforceConstraints = true
         Me.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
-        Me.tableproject = New projectDataTable()
-        MyBase.Tables.Add(Me.tableproject)
+        Me.tableproject1 = New project1DataTable()
+        MyBase.Tables.Add(Me.tableproject1)
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-    Private Function ShouldSerializeproject() As Boolean
+    Private Function ShouldSerializeproject1() As Boolean
         Return false
     End Function
     
@@ -273,15 +273,15 @@ Partial Public Class _project__1_DataSet
     End Function
     
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-    Public Delegate Sub projectRowChangeEventHandler(ByVal sender As Object, ByVal e As projectRowChangeEvent)
+    Public Delegate Sub project1RowChangeEventHandler(ByVal sender As Object, ByVal e As project1RowChangeEvent)
     
     '''<summary>
     '''Represents the strongly named DataTable class.
     '''</summary>
     <Global.System.Serializable(),  _
      Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
-    Partial Public Class projectDataTable
-        Inherits Global.System.Data.TypedTableBase(Of projectRow)
+    Partial Public Class project1DataTable
+        Inherits Global.System.Data.TypedTableBase(Of project1Row)
         
         Private columnID As Global.System.Data.DataColumn
         
@@ -305,7 +305,7 @@ Partial Public Class _project__1_DataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub New()
             MyBase.New
-            Me.TableName = "project"
+            Me.TableName = "project1"
             Me.BeginInit
             Me.InitClass
             Me.EndInit
@@ -419,50 +419,50 @@ Partial Public Class _project__1_DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Default ReadOnly Property Item(ByVal index As Integer) As projectRow
+        Public Default ReadOnly Property Item(ByVal index As Integer) As project1Row
             Get
-                Return CType(Me.Rows(index),projectRow)
+                Return CType(Me.Rows(index),project1Row)
             End Get
         End Property
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Event projectRowChanging As projectRowChangeEventHandler
+        Public Event project1RowChanging As project1RowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Event projectRowChanged As projectRowChangeEventHandler
+        Public Event project1RowChanged As project1RowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Event projectRowDeleting As projectRowChangeEventHandler
+        Public Event project1RowDeleting As project1RowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Event projectRowDeleted As projectRowChangeEventHandler
+        Public Event project1RowDeleted As project1RowChangeEventHandler
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Sub AddprojectRow(ByVal row As projectRow)
+        Public Overloads Sub Addproject1Row(ByVal row As project1Row)
             Me.Rows.Add(row)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function AddprojectRow(ByVal BatterId As Integer, ByVal BatteryName As String, ByVal BatteryType As String, ByVal UnitPrice As Decimal, ByVal DateBought As Date, ByVal DateSold As Date, ByVal Quantity As Integer, ByVal PackageNumber As Integer) As projectRow
-            Dim rowprojectRow As projectRow = CType(Me.NewRow,projectRow)
+        Public Overloads Function Addproject1Row(ByVal BatterId As Integer, ByVal BatteryName As String, ByVal BatteryType As String, ByVal UnitPrice As Decimal, ByVal DateBought As Date, ByVal DateSold As Date, ByVal Quantity As Integer, ByVal PackageNumber As Integer) As project1Row
+            Dim rowproject1Row As project1Row = CType(Me.NewRow,project1Row)
             Dim columnValuesArray() As Object = New Object() {Nothing, BatterId, BatteryName, BatteryType, UnitPrice, DateBought, DateSold, Quantity, PackageNumber}
-            rowprojectRow.ItemArray = columnValuesArray
-            Me.Rows.Add(rowprojectRow)
-            Return rowprojectRow
+            rowproject1Row.ItemArray = columnValuesArray
+            Me.Rows.Add(rowproject1Row)
+            Return rowproject1Row
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function FindByID(ByVal ID As Integer) As projectRow
-            Return CType(Me.Rows.Find(New Object() {ID}),projectRow)
+        Public Function FindByID(ByVal ID As Integer) As project1Row
+            Return CType(Me.Rows.Find(New Object() {ID}),project1Row)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Overrides Function Clone() As Global.System.Data.DataTable
-            Dim cln As projectDataTable = CType(MyBase.Clone,projectDataTable)
+            Dim cln As project1DataTable = CType(MyBase.Clone,project1DataTable)
             cln.InitVars
             Return cln
         End Function
@@ -470,7 +470,7 @@ Partial Public Class _project__1_DataSet
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
-            Return New projectDataTable()
+            Return New project1DataTable()
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -520,28 +520,28 @@ Partial Public Class _project__1_DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function NewprojectRow() As projectRow
-            Return CType(Me.NewRow,projectRow)
+        Public Function Newproject1Row() As project1Row
+            Return CType(Me.NewRow,project1Row)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
-            Return New projectRow(builder)
+            Return New project1Row(builder)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Protected Overrides Function GetRowType() As Global.System.Type
-            Return GetType(projectRow)
+            Return GetType(project1Row)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowChanged(e)
-            If (Not (Me.projectRowChangedEvent) Is Nothing) Then
-                RaiseEvent projectRowChanged(Me, New projectRowChangeEvent(CType(e.Row,projectRow), e.Action))
+            If (Not (Me.project1RowChangedEvent) Is Nothing) Then
+                RaiseEvent project1RowChanged(Me, New project1RowChangeEvent(CType(e.Row,project1Row), e.Action))
             End If
         End Sub
         
@@ -549,8 +549,8 @@ Partial Public Class _project__1_DataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowChanging(e)
-            If (Not (Me.projectRowChangingEvent) Is Nothing) Then
-                RaiseEvent projectRowChanging(Me, New projectRowChangeEvent(CType(e.Row,projectRow), e.Action))
+            If (Not (Me.project1RowChangingEvent) Is Nothing) Then
+                RaiseEvent project1RowChanging(Me, New project1RowChangeEvent(CType(e.Row,project1Row), e.Action))
             End If
         End Sub
         
@@ -558,8 +558,8 @@ Partial Public Class _project__1_DataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowDeleted(e)
-            If (Not (Me.projectRowDeletedEvent) Is Nothing) Then
-                RaiseEvent projectRowDeleted(Me, New projectRowChangeEvent(CType(e.Row,projectRow), e.Action))
+            If (Not (Me.project1RowDeletedEvent) Is Nothing) Then
+                RaiseEvent project1RowDeleted(Me, New project1RowChangeEvent(CType(e.Row,project1Row), e.Action))
             End If
         End Sub
         
@@ -567,14 +567,14 @@ Partial Public Class _project__1_DataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowDeleting(e)
-            If (Not (Me.projectRowDeletingEvent) Is Nothing) Then
-                RaiseEvent projectRowDeleting(Me, New projectRowChangeEvent(CType(e.Row,projectRow), e.Action))
+            If (Not (Me.project1RowDeletingEvent) Is Nothing) Then
+                RaiseEvent project1RowDeleting(Me, New project1RowChangeEvent(CType(e.Row,project1Row), e.Action))
             End If
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub RemoveprojectRow(ByVal row As projectRow)
+        Public Sub Removeproject1Row(ByVal row As project1Row)
             Me.Rows.Remove(row)
         End Sub
         
@@ -601,7 +601,7 @@ Partial Public Class _project__1_DataSet
             type.Attributes.Add(attribute1)
             Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
             attribute2.Name = "tableTypeName"
-            attribute2.FixedValue = "projectDataTable"
+            attribute2.FixedValue = "project1DataTable"
             type.Attributes.Add(attribute2)
             type.Particle = sequence
             Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
@@ -648,26 +648,26 @@ Partial Public Class _project__1_DataSet
     '''<summary>
     '''Represents strongly named DataRow class.
     '''</summary>
-    Partial Public Class projectRow
+    Partial Public Class project1Row
         Inherits Global.System.Data.DataRow
         
-        Private tableproject As projectDataTable
+        Private tableproject1 As project1DataTable
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
             MyBase.New(rb)
-            Me.tableproject = CType(Me.Table,projectDataTable)
+            Me.tableproject1 = CType(Me.Table,project1DataTable)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Property ID() As Integer
             Get
-                Return CType(Me(Me.tableproject.IDColumn),Integer)
+                Return CType(Me(Me.tableproject1.IDColumn),Integer)
             End Get
             Set
-                Me(Me.tableproject.IDColumn) = value
+                Me(Me.tableproject1.IDColumn) = value
             End Set
         End Property
         
@@ -676,13 +676,13 @@ Partial Public Class _project__1_DataSet
         Public Property BatterId() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableproject.BatterIdColumn),Integer)
+                    Return CType(Me(Me.tableproject1.BatterIdColumn),Integer)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'BatterId' in table 'project' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'BatterId' in table 'project1' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableproject.BatterIdColumn) = value
+                Me(Me.tableproject1.BatterIdColumn) = value
             End Set
         End Property
         
@@ -691,13 +691,13 @@ Partial Public Class _project__1_DataSet
         Public Property BatteryName() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableproject.BatteryNameColumn),String)
+                    Return CType(Me(Me.tableproject1.BatteryNameColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'BatteryName' in table 'project' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'BatteryName' in table 'project1' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableproject.BatteryNameColumn) = value
+                Me(Me.tableproject1.BatteryNameColumn) = value
             End Set
         End Property
         
@@ -706,13 +706,13 @@ Partial Public Class _project__1_DataSet
         Public Property BatteryType() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableproject.BatteryTypeColumn),String)
+                    Return CType(Me(Me.tableproject1.BatteryTypeColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'BatteryType' in table 'project' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'BatteryType' in table 'project1' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableproject.BatteryTypeColumn) = value
+                Me(Me.tableproject1.BatteryTypeColumn) = value
             End Set
         End Property
         
@@ -721,13 +721,13 @@ Partial Public Class _project__1_DataSet
         Public Property UnitPrice() As Decimal
             Get
                 Try 
-                    Return CType(Me(Me.tableproject.UnitPriceColumn),Decimal)
+                    Return CType(Me(Me.tableproject1.UnitPriceColumn),Decimal)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'UnitPrice' in table 'project' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'UnitPrice' in table 'project1' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableproject.UnitPriceColumn) = value
+                Me(Me.tableproject1.UnitPriceColumn) = value
             End Set
         End Property
         
@@ -736,13 +736,13 @@ Partial Public Class _project__1_DataSet
         Public Property DateBought() As Date
             Get
                 Try 
-                    Return CType(Me(Me.tableproject.DateBoughtColumn),Date)
+                    Return CType(Me(Me.tableproject1.DateBoughtColumn),Date)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'DateBought' in table 'project' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'DateBought' in table 'project1' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableproject.DateBoughtColumn) = value
+                Me(Me.tableproject1.DateBoughtColumn) = value
             End Set
         End Property
         
@@ -751,13 +751,13 @@ Partial Public Class _project__1_DataSet
         Public Property DateSold() As Date
             Get
                 Try 
-                    Return CType(Me(Me.tableproject.DateSoldColumn),Date)
+                    Return CType(Me(Me.tableproject1.DateSoldColumn),Date)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'DateSold' in table 'project' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'DateSold' in table 'project1' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableproject.DateSoldColumn) = value
+                Me(Me.tableproject1.DateSoldColumn) = value
             End Set
         End Property
         
@@ -766,13 +766,13 @@ Partial Public Class _project__1_DataSet
         Public Property Quantity() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableproject.QuantityColumn),Integer)
+                    Return CType(Me(Me.tableproject1.QuantityColumn),Integer)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Quantity' in table 'project' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Quantity' in table 'project1' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableproject.QuantityColumn) = value
+                Me(Me.tableproject1.QuantityColumn) = value
             End Set
         End Property
         
@@ -781,110 +781,110 @@ Partial Public Class _project__1_DataSet
         Public Property PackageNumber() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableproject.PackageNumberColumn),Integer)
+                    Return CType(Me(Me.tableproject1.PackageNumberColumn),Integer)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'PackageNumber' in table 'project' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'PackageNumber' in table 'project1' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableproject.PackageNumberColumn) = value
+                Me(Me.tableproject1.PackageNumberColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Function IsBatterIdNull() As Boolean
-            Return Me.IsNull(Me.tableproject.BatterIdColumn)
+            Return Me.IsNull(Me.tableproject1.BatterIdColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub SetBatterIdNull()
-            Me(Me.tableproject.BatterIdColumn) = Global.System.Convert.DBNull
+            Me(Me.tableproject1.BatterIdColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Function IsBatteryNameNull() As Boolean
-            Return Me.IsNull(Me.tableproject.BatteryNameColumn)
+            Return Me.IsNull(Me.tableproject1.BatteryNameColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub SetBatteryNameNull()
-            Me(Me.tableproject.BatteryNameColumn) = Global.System.Convert.DBNull
+            Me(Me.tableproject1.BatteryNameColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Function IsBatteryTypeNull() As Boolean
-            Return Me.IsNull(Me.tableproject.BatteryTypeColumn)
+            Return Me.IsNull(Me.tableproject1.BatteryTypeColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub SetBatteryTypeNull()
-            Me(Me.tableproject.BatteryTypeColumn) = Global.System.Convert.DBNull
+            Me(Me.tableproject1.BatteryTypeColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Function IsUnitPriceNull() As Boolean
-            Return Me.IsNull(Me.tableproject.UnitPriceColumn)
+            Return Me.IsNull(Me.tableproject1.UnitPriceColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub SetUnitPriceNull()
-            Me(Me.tableproject.UnitPriceColumn) = Global.System.Convert.DBNull
+            Me(Me.tableproject1.UnitPriceColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Function IsDateBoughtNull() As Boolean
-            Return Me.IsNull(Me.tableproject.DateBoughtColumn)
+            Return Me.IsNull(Me.tableproject1.DateBoughtColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub SetDateBoughtNull()
-            Me(Me.tableproject.DateBoughtColumn) = Global.System.Convert.DBNull
+            Me(Me.tableproject1.DateBoughtColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Function IsDateSoldNull() As Boolean
-            Return Me.IsNull(Me.tableproject.DateSoldColumn)
+            Return Me.IsNull(Me.tableproject1.DateSoldColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub SetDateSoldNull()
-            Me(Me.tableproject.DateSoldColumn) = Global.System.Convert.DBNull
+            Me(Me.tableproject1.DateSoldColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Function IsQuantityNull() As Boolean
-            Return Me.IsNull(Me.tableproject.QuantityColumn)
+            Return Me.IsNull(Me.tableproject1.QuantityColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub SetQuantityNull()
-            Me(Me.tableproject.QuantityColumn) = Global.System.Convert.DBNull
+            Me(Me.tableproject1.QuantityColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Function IsPackageNumberNull() As Boolean
-            Return Me.IsNull(Me.tableproject.PackageNumberColumn)
+            Return Me.IsNull(Me.tableproject1.PackageNumberColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub SetPackageNumberNull()
-            Me(Me.tableproject.PackageNumberColumn) = Global.System.Convert.DBNull
+            Me(Me.tableproject1.PackageNumberColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -892,16 +892,16 @@ Partial Public Class _project__1_DataSet
     '''Row event argument class
     '''</summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-    Public Class projectRowChangeEvent
+    Public Class project1RowChangeEvent
         Inherits Global.System.EventArgs
         
-        Private eventRow As projectRow
+        Private eventRow As project1Row
         
         Private eventAction As Global.System.Data.DataRowAction
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub New(ByVal row As projectRow, ByVal action As Global.System.Data.DataRowAction)
+        Public Sub New(ByVal row As project1Row, ByVal action As Global.System.Data.DataRowAction)
             MyBase.New
             Me.eventRow = row
             Me.eventAction = action
@@ -909,7 +909,7 @@ Partial Public Class _project__1_DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property Row() As projectRow
+        Public ReadOnly Property Row() As project1Row
             Get
                 Return Me.eventRow
             End Get
@@ -936,7 +936,7 @@ Namespace _project__1_DataSetTableAdapters
      Global.System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner"& _ 
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),  _
      Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-    Partial Public Class projectTableAdapter
+    Partial Public Class project1TableAdapter
         Inherits Global.System.ComponentModel.Component
         
         Private WithEvents _adapter As Global.System.Data.OleDb.OleDbDataAdapter
@@ -1053,7 +1053,7 @@ Namespace _project__1_DataSetTableAdapters
             Me._adapter = New Global.System.Data.OleDb.OleDbDataAdapter()
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
-            tableMapping.DataSetTable = "project"
+            tableMapping.DataSetTable = "project1"
             tableMapping.ColumnMappings.Add("ID", "ID")
             tableMapping.ColumnMappings.Add("BatterId", "BatterId")
             tableMapping.ColumnMappings.Add("BatteryName", "BatteryName")
@@ -1166,7 +1166,7 @@ Namespace _project__1_DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As _project__1_DataSet.projectDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As _project__1_DataSet.project1DataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -1179,9 +1179,9 @@ Namespace _project__1_DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As _project__1_DataSet.projectDataTable
+        Public Overloads Overridable Function GetData() As _project__1_DataSet.project1DataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As _project__1_DataSet.projectDataTable = New _project__1_DataSet.projectDataTable()
+            Dim dataTable As _project__1_DataSet.project1DataTable = New _project__1_DataSet.project1DataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -1189,7 +1189,7 @@ Namespace _project__1_DataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As _project__1_DataSet.projectDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As _project__1_DataSet.project1DataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
@@ -1197,7 +1197,7 @@ Namespace _project__1_DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
         Public Overloads Overridable Function Update(ByVal dataSet As _project__1_DataSet) As Integer
-            Return Me.Adapter.Update(dataSet, "project")
+            Return Me.Adapter.Update(dataSet, "project1")
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1499,7 +1499,7 @@ Namespace _project__1_DataSetTableAdapters
         
         Private _updateOrder As UpdateOrderOption
         
-        Private _projectTableAdapter As projectTableAdapter
+        Private _project1TableAdapter As project1TableAdapter
         
         Private _backupDataSetBeforeUpdate As Boolean
         
@@ -1521,12 +1521,12 @@ Namespace _project__1_DataSetTableAdapters
          Global.System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso"& _ 
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3"& _ 
             "a", "System.Drawing.Design.UITypeEditor")>  _
-        Public Property projectTableAdapter() As projectTableAdapter
+        Public Property project1TableAdapter() As project1TableAdapter
             Get
-                Return Me._projectTableAdapter
+                Return Me._project1TableAdapter
             End Get
             Set
-                Me._projectTableAdapter = value
+                Me._project1TableAdapter = value
             End Set
         End Property
         
@@ -1549,9 +1549,9 @@ Namespace _project__1_DataSetTableAdapters
                 If (Not (Me._connection) Is Nothing) Then
                     Return Me._connection
                 End If
-                If ((Not (Me._projectTableAdapter) Is Nothing)  _
-                            AndAlso (Not (Me._projectTableAdapter.Connection) Is Nothing)) Then
-                    Return Me._projectTableAdapter.Connection
+                If ((Not (Me._project1TableAdapter) Is Nothing)  _
+                            AndAlso (Not (Me._project1TableAdapter.Connection) Is Nothing)) Then
+                    Return Me._project1TableAdapter.Connection
                 End If
                 Return Nothing
             End Get
@@ -1566,7 +1566,7 @@ Namespace _project__1_DataSetTableAdapters
         Public ReadOnly Property TableAdapterInstanceCount() As Integer
             Get
                 Dim count As Integer = 0
-                If (Not (Me._projectTableAdapter) Is Nothing) Then
+                If (Not (Me._project1TableAdapter) Is Nothing) Then
                     count = (count + 1)
                 End If
                 Return count
@@ -1580,12 +1580,12 @@ Namespace _project__1_DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Function UpdateUpdatedRows(ByVal dataSet As _project__1_DataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow), ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
-            If (Not (Me._projectTableAdapter) Is Nothing) Then
-                Dim updatedRows() As Global.System.Data.DataRow = dataSet.project.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
+            If (Not (Me._project1TableAdapter) Is Nothing) Then
+                Dim updatedRows() As Global.System.Data.DataRow = dataSet.project1.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
                 updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
                 If ((Not (updatedRows) Is Nothing)  _
                             AndAlso (0 < updatedRows.Length)) Then
-                    result = (result + Me._projectTableAdapter.Update(updatedRows))
+                    result = (result + Me._project1TableAdapter.Update(updatedRows))
                     allChangedRows.AddRange(updatedRows)
                 End If
             End If
@@ -1599,11 +1599,11 @@ Namespace _project__1_DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Function UpdateInsertedRows(ByVal dataSet As _project__1_DataSet, ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
-            If (Not (Me._projectTableAdapter) Is Nothing) Then
-                Dim addedRows() As Global.System.Data.DataRow = dataSet.project.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
+            If (Not (Me._project1TableAdapter) Is Nothing) Then
+                Dim addedRows() As Global.System.Data.DataRow = dataSet.project1.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
                 If ((Not (addedRows) Is Nothing)  _
                             AndAlso (0 < addedRows.Length)) Then
-                    result = (result + Me._projectTableAdapter.Update(addedRows))
+                    result = (result + Me._project1TableAdapter.Update(addedRows))
                     allAddedRows.AddRange(addedRows)
                 End If
             End If
@@ -1617,11 +1617,11 @@ Namespace _project__1_DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Function UpdateDeletedRows(ByVal dataSet As _project__1_DataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
-            If (Not (Me._projectTableAdapter) Is Nothing) Then
-                Dim deletedRows() As Global.System.Data.DataRow = dataSet.project.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
+            If (Not (Me._project1TableAdapter) Is Nothing) Then
+                Dim deletedRows() As Global.System.Data.DataRow = dataSet.project1.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
                 If ((Not (deletedRows) Is Nothing)  _
                             AndAlso (0 < deletedRows.Length)) Then
-                    result = (result + Me._projectTableAdapter.Update(deletedRows))
+                    result = (result + Me._project1TableAdapter.Update(deletedRows))
                     allChangedRows.AddRange(deletedRows)
                 End If
             End If
@@ -1666,8 +1666,8 @@ Namespace _project__1_DataSetTableAdapters
             If (dataSet.HasChanges = false) Then
                 Return 0
             End If
-            If ((Not (Me._projectTableAdapter) Is Nothing)  _
-                        AndAlso (Me.MatchTableAdapterConnection(Me._projectTableAdapter.Connection) = false)) Then
+            If ((Not (Me._project1TableAdapter) Is Nothing)  _
+                        AndAlso (Me.MatchTableAdapterConnection(Me._project1TableAdapter.Connection) = false)) Then
                 Throw New Global.System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s"& _ 
                         "tring.")
             End If
@@ -1703,13 +1703,13 @@ Namespace _project__1_DataSetTableAdapters
             Try 
                 '---- Prepare for update -----------
                 '
-                If (Not (Me._projectTableAdapter) Is Nothing) Then
-                    revertConnections.Add(Me._projectTableAdapter, Me._projectTableAdapter.Connection)
-                    Me._projectTableAdapter.Connection = CType(workConnection,Global.System.Data.OleDb.OleDbConnection)
-                    Me._projectTableAdapter.Transaction = CType(workTransaction,Global.System.Data.OleDb.OleDbTransaction)
-                    If Me._projectTableAdapter.Adapter.AcceptChangesDuringUpdate Then
-                        Me._projectTableAdapter.Adapter.AcceptChangesDuringUpdate = false
-                        adaptersWithAcceptChangesDuringUpdate.Add(Me._projectTableAdapter.Adapter)
+                If (Not (Me._project1TableAdapter) Is Nothing) Then
+                    revertConnections.Add(Me._project1TableAdapter, Me._project1TableAdapter.Connection)
+                    Me._project1TableAdapter.Connection = CType(workConnection,Global.System.Data.OleDb.OleDbConnection)
+                    Me._project1TableAdapter.Transaction = CType(workTransaction,Global.System.Data.OleDb.OleDbTransaction)
+                    If Me._project1TableAdapter.Adapter.AcceptChangesDuringUpdate Then
+                        Me._project1TableAdapter.Adapter.AcceptChangesDuringUpdate = false
+                        adaptersWithAcceptChangesDuringUpdate.Add(Me._project1TableAdapter.Adapter)
                     End If
                 End If
                 '
@@ -1772,9 +1772,9 @@ Namespace _project__1_DataSetTableAdapters
                 If workConnOpened Then
                     workConnection.Close
                 End If
-                If (Not (Me._projectTableAdapter) Is Nothing) Then
-                    Me._projectTableAdapter.Connection = CType(revertConnections(Me._projectTableAdapter),Global.System.Data.OleDb.OleDbConnection)
-                    Me._projectTableAdapter.Transaction = Nothing
+                If (Not (Me._project1TableAdapter) Is Nothing) Then
+                    Me._project1TableAdapter.Connection = CType(revertConnections(Me._project1TableAdapter),Global.System.Data.OleDb.OleDbConnection)
+                    Me._project1TableAdapter.Transaction = Nothing
                 End If
                 If (0 < adaptersWithAcceptChangesDuringUpdate.Count) Then
                     Dim adapters((adaptersWithAcceptChangesDuringUpdate.Count) - 1) As Global.System.Data.Common.DataAdapter

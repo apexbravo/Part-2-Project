@@ -23,111 +23,38 @@ Partial Class Form2
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form2))
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.txtpassword = New System.Windows.Forms.TextBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.BtnExit = New System.Windows.Forms.Button()
         Me.BtnLogin = New System.Windows.Forms.Button()
         Me.BtnClear = New System.Windows.Forms.Button()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox1.SuspendLayout()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Hello = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.txtpassword = New System.Windows.Forms.TextBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.txtName = New System.Windows.Forms.TextBox()
         Me.GroupBox2.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(19, 19)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(129, 137)
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.BackColor = System.Drawing.Color.Red
-        Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.txtpassword)
-        Me.GroupBox1.Controls.Add(Me.ComboBox1)
-        Me.GroupBox1.Controls.Add(Me.PictureBox1)
-        Me.GroupBox1.Location = New System.Drawing.Point(9, 68)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(555, 177)
-        Me.GroupBox1.TabIndex = 1
-        Me.GroupBox1.TabStop = False
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Bariol Regular", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(191, 113)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(80, 17)
-        Me.Label3.TabIndex = 4
-        Me.Label3.Text = "PASSWORD"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Bariol Regular", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(191, 56)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(68, 17)
-        Me.Label2.TabIndex = 3
-        Me.Label2.Text = "LOGIN AS"
-        '
-        'txtpassword
-        '
-        Me.txtpassword.Location = New System.Drawing.Point(357, 102)
-        Me.txtpassword.Multiline = True
-        Me.txtpassword.Name = "txtpassword"
-        Me.txtpassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtpassword.Size = New System.Drawing.Size(184, 28)
-        Me.txtpassword.TabIndex = 2
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.Font = New System.Drawing.Font("Bariol Regular", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Admin", "Standard"})
-        Me.ComboBox1.Location = New System.Drawing.Point(357, 56)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(184, 25)
-        Me.ComboBox1.TabIndex = 1
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("AA Typewriter", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(112, 29)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(378, 20)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "WELCOME TO EXITE BATTERY SHOP SYSTEM"
         '
         'GroupBox2
         '
-        Me.GroupBox2.BackColor = System.Drawing.Color.Red
+        Me.GroupBox2.BackColor = System.Drawing.Color.Transparent
         Me.GroupBox2.Controls.Add(Me.BtnExit)
         Me.GroupBox2.Controls.Add(Me.BtnLogin)
         Me.GroupBox2.Controls.Add(Me.BtnClear)
-        Me.GroupBox2.Location = New System.Drawing.Point(9, 265)
+        Me.GroupBox2.Location = New System.Drawing.Point(9, 207)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(555, 102)
+        Me.GroupBox2.Size = New System.Drawing.Size(531, 57)
         Me.GroupBox2.TabIndex = 3
         Me.GroupBox2.TabStop = False
         '
         'BtnExit
         '
-        Me.BtnExit.Font = New System.Drawing.Font("Bariol Bold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnExit.Location = New System.Drawing.Point(282, 49)
+        Me.BtnExit.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnExit.Location = New System.Drawing.Point(275, 16)
         Me.BtnExit.Name = "BtnExit"
         Me.BtnExit.Size = New System.Drawing.Size(75, 31)
         Me.BtnExit.TabIndex = 2
@@ -136,8 +63,8 @@ Partial Class Form2
         '
         'BtnLogin
         '
-        Me.BtnLogin.Font = New System.Drawing.Font("Bariol Bold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnLogin.Location = New System.Drawing.Point(466, 49)
+        Me.BtnLogin.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnLogin.Location = New System.Drawing.Point(437, 16)
         Me.BtnLogin.Name = "BtnLogin"
         Me.BtnLogin.Size = New System.Drawing.Size(75, 31)
         Me.BtnLogin.TabIndex = 1
@@ -146,41 +73,130 @@ Partial Class Form2
         '
         'BtnClear
         '
-        Me.BtnClear.Font = New System.Drawing.Font("Bariol Bold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnClear.Location = New System.Drawing.Point(373, 49)
+        Me.BtnClear.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnClear.Location = New System.Drawing.Point(356, 16)
         Me.BtnClear.Name = "BtnClear"
         Me.BtnClear.Size = New System.Drawing.Size(75, 31)
         Me.BtnClear.TabIndex = 0
         Me.BtnClear.Text = "CLEAR"
         Me.BtnClear.UseVisualStyleBackColor = True
         '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackColor = System.Drawing.Color.SkyBlue
+        Me.PictureBox2.Location = New System.Drawing.Point(546, 0)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(321, 375)
+        Me.PictureBox2.TabIndex = 4
+        Me.PictureBox2.TabStop = False
+        '
+        'Hello
+        '
+        Me.Hello.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.Hello.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Hello.Location = New System.Drawing.Point(563, 66)
+        Me.Hello.Name = "Hello"
+        Me.Hello.Size = New System.Drawing.Size(191, 121)
+        Me.Hello.TabIndex = 5
+        Me.Hello.Text = "Welcome  to the  Exide Battery Shop System"
+        Me.Hello.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label3.Location = New System.Drawing.Point(184, 128)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(103, 19)
+        Me.Label3.TabIndex = 10
+        Me.Label3.Text = "PASSWORD"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(185, 72)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(102, 19)
+        Me.Label2.TabIndex = 9
+        Me.Label2.Text = "USERNAME"
+        '
+        'txtpassword
+        '
+        Me.txtpassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtpassword.Location = New System.Drawing.Point(337, 119)
+        Me.txtpassword.Multiline = True
+        Me.txtpassword.Name = "txtpassword"
+        Me.txtpassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtpassword.Size = New System.Drawing.Size(184, 28)
+        Me.txtpassword.TabIndex = 8
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.Default
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(53, 36)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(96, 128)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.PictureBox1.TabIndex = 6
+        Me.PictureBox1.TabStop = False
+        '
+        'txtName
+        '
+        Me.txtName.BackColor = System.Drawing.Color.White
+        Me.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtName.Location = New System.Drawing.Point(337, 72)
+        Me.txtName.Multiline = True
+        Me.txtName.Name = "txtName"
+        Me.txtName.Size = New System.Drawing.Size(184, 28)
+        Me.txtName.TabIndex = 11
+        '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.Red
-        Me.ClientSize = New System.Drawing.Size(568, 395)
+        Me.AutoSize = True
+        Me.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ClientSize = New System.Drawing.Size(766, 266)
+        Me.Controls.Add(Me.txtName)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.txtpassword)
+        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.Hello)
+        Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.GroupBox2)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.GroupBox1)
+        Me.DoubleBuffered = True
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
+        Me.MaximumSize = New System.Drawing.Size(786, 309)
         Me.Name = "Form2"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.GroupBox2.ResumeLayout(False)
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
-    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents txtpassword As System.Windows.Forms.TextBox
-    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
-    Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents BtnLogin As System.Windows.Forms.Button
     Friend WithEvents BtnClear As System.Windows.Forms.Button
-    Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents BtnExit As System.Windows.Forms.Button
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents Hello As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents txtpassword As TextBox
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents txtName As TextBox
 End Class

@@ -78,6 +78,7 @@ Partial Class Form1
         Me.Controls.Add(Me.PictureBox2)
         Me.ForeColor = System.Drawing.SystemColors.Control
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow
+        Me.IsMdiContainer = True
         Me.Name = "Form1"
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

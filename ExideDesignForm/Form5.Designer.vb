@@ -26,6 +26,17 @@ Partial Class Form5
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form5))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.IDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.BatterIdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.BatteryNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.BatteryTypeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.UnitPriceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DateBoughtDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DateSoldDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.QuantityDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PackageNumberDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Project1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me._project__1_DataSet = New ExideDesignForm._project__1_DataSet()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
@@ -40,50 +51,108 @@ Partial Class Form5
         Me.Button9 = New System.Windows.Forms.Button()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me._project__1_DataSet = New ExideDesignForm._project__1_DataSet()
-        Me.ProjectBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ProjectTableAdapter = New ExideDesignForm._project__1_DataSetTableAdapters.projectTableAdapter()
-        Me.IDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.BatterIdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.BatteryNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.BatteryTypeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.UnitPriceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DateBoughtDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DateSoldDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.QuantityDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PackageNumberDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Project1TableAdapter = New ExideDesignForm._project__1_DataSetTableAdapters.project1TableAdapter()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Project1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me._project__1_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me._project__1_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ProjectBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
+        Me.GroupBox1.BackColor = System.Drawing.Color.DarkGray
         Me.GroupBox1.Controls.Add(Me.DataGridView1)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 95)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(614, 287)
+        Me.GroupBox1.Size = New System.Drawing.Size(953, 287)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
         'DataGridView1
         '
         Me.DataGridView1.AutoGenerateColumns = False
+        Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption
+        Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IDDataGridViewTextBoxColumn, Me.BatterIdDataGridViewTextBoxColumn, Me.BatteryNameDataGridViewTextBoxColumn, Me.BatteryTypeDataGridViewTextBoxColumn, Me.UnitPriceDataGridViewTextBoxColumn, Me.DateBoughtDataGridViewTextBoxColumn, Me.DateSoldDataGridViewTextBoxColumn, Me.QuantityDataGridViewTextBoxColumn, Me.PackageNumberDataGridViewTextBoxColumn})
-        Me.DataGridView1.DataSource = Me.ProjectBindingSource
-        Me.DataGridView1.Location = New System.Drawing.Point(6, 19)
+        Me.DataGridView1.DataSource = Me.Project1BindingSource
+        Me.DataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
+        Me.DataGridView1.Location = New System.Drawing.Point(5, 19)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(602, 262)
+        Me.DataGridView1.Size = New System.Drawing.Size(942, 262)
         Me.DataGridView1.TabIndex = 0
+        '
+        'IDDataGridViewTextBoxColumn
+        '
+        Me.IDDataGridViewTextBoxColumn.DataPropertyName = "ID"
+        Me.IDDataGridViewTextBoxColumn.HeaderText = "ID"
+        Me.IDDataGridViewTextBoxColumn.Name = "IDDataGridViewTextBoxColumn"
+        '
+        'BatterIdDataGridViewTextBoxColumn
+        '
+        Me.BatterIdDataGridViewTextBoxColumn.DataPropertyName = "BatterId"
+        Me.BatterIdDataGridViewTextBoxColumn.HeaderText = "BatterId"
+        Me.BatterIdDataGridViewTextBoxColumn.Name = "BatterIdDataGridViewTextBoxColumn"
+        '
+        'BatteryNameDataGridViewTextBoxColumn
+        '
+        Me.BatteryNameDataGridViewTextBoxColumn.DataPropertyName = "BatteryName"
+        Me.BatteryNameDataGridViewTextBoxColumn.HeaderText = "BatteryName"
+        Me.BatteryNameDataGridViewTextBoxColumn.Name = "BatteryNameDataGridViewTextBoxColumn"
+        '
+        'BatteryTypeDataGridViewTextBoxColumn
+        '
+        Me.BatteryTypeDataGridViewTextBoxColumn.DataPropertyName = "BatteryType"
+        Me.BatteryTypeDataGridViewTextBoxColumn.HeaderText = "BatteryType"
+        Me.BatteryTypeDataGridViewTextBoxColumn.Name = "BatteryTypeDataGridViewTextBoxColumn"
+        '
+        'UnitPriceDataGridViewTextBoxColumn
+        '
+        Me.UnitPriceDataGridViewTextBoxColumn.DataPropertyName = "UnitPrice"
+        Me.UnitPriceDataGridViewTextBoxColumn.HeaderText = "UnitPrice"
+        Me.UnitPriceDataGridViewTextBoxColumn.Name = "UnitPriceDataGridViewTextBoxColumn"
+        '
+        'DateBoughtDataGridViewTextBoxColumn
+        '
+        Me.DateBoughtDataGridViewTextBoxColumn.DataPropertyName = "DateBought"
+        Me.DateBoughtDataGridViewTextBoxColumn.HeaderText = "DateBought"
+        Me.DateBoughtDataGridViewTextBoxColumn.Name = "DateBoughtDataGridViewTextBoxColumn"
+        '
+        'DateSoldDataGridViewTextBoxColumn
+        '
+        Me.DateSoldDataGridViewTextBoxColumn.DataPropertyName = "DateSold"
+        Me.DateSoldDataGridViewTextBoxColumn.HeaderText = "DateSold"
+        Me.DateSoldDataGridViewTextBoxColumn.Name = "DateSoldDataGridViewTextBoxColumn"
+        '
+        'QuantityDataGridViewTextBoxColumn
+        '
+        Me.QuantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity"
+        Me.QuantityDataGridViewTextBoxColumn.HeaderText = "Quantity"
+        Me.QuantityDataGridViewTextBoxColumn.Name = "QuantityDataGridViewTextBoxColumn"
+        '
+        'PackageNumberDataGridViewTextBoxColumn
+        '
+        Me.PackageNumberDataGridViewTextBoxColumn.DataPropertyName = "PackageNumber"
+        Me.PackageNumberDataGridViewTextBoxColumn.HeaderText = "PackageNumber"
+        Me.PackageNumberDataGridViewTextBoxColumn.Name = "PackageNumberDataGridViewTextBoxColumn"
+        '
+        'Project1BindingSource
+        '
+        Me.Project1BindingSource.DataMember = "project1"
+        Me.Project1BindingSource.DataSource = Me._project__1_DataSet
+        '
+        '_project__1_DataSet
+        '
+        Me._project__1_DataSet.DataSetName = "_project__1_DataSet"
+        Me._project__1_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(12, 75)
         Me.Label1.Name = "Label1"
@@ -151,6 +220,7 @@ Partial Class Form5
         '
         'PictureBox2
         '
+        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox2.BackgroundImage = CType(resources.GetObject("PictureBox2.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
@@ -202,6 +272,7 @@ Partial Class Form5
         '
         'PictureBox3
         '
+        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
         Me.PictureBox3.Location = New System.Drawing.Point(131, 10)
         Me.PictureBox3.Name = "PictureBox3"
@@ -212,6 +283,7 @@ Partial Class Form5
         '
         'PictureBox1
         '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
         Me.PictureBox1.Location = New System.Drawing.Point(217, 10)
         Me.PictureBox1.Name = "PictureBox1"
@@ -220,80 +292,18 @@ Partial Class Form5
         Me.PictureBox1.TabIndex = 17
         Me.PictureBox1.TabStop = False
         '
-        '_project__1_DataSet
+        'Project1TableAdapter
         '
-        Me._project__1_DataSet.DataSetName = "_project__1_DataSet"
-        Me._project__1_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'ProjectBindingSource
-        '
-        Me.ProjectBindingSource.DataMember = "project"
-        Me.ProjectBindingSource.DataSource = Me._project__1_DataSet
-        '
-        'ProjectTableAdapter
-        '
-        Me.ProjectTableAdapter.ClearBeforeFill = True
-        '
-        'IDDataGridViewTextBoxColumn
-        '
-        Me.IDDataGridViewTextBoxColumn.DataPropertyName = "ID"
-        Me.IDDataGridViewTextBoxColumn.HeaderText = "ID"
-        Me.IDDataGridViewTextBoxColumn.Name = "IDDataGridViewTextBoxColumn"
-        '
-        'BatterIdDataGridViewTextBoxColumn
-        '
-        Me.BatterIdDataGridViewTextBoxColumn.DataPropertyName = "BatterId"
-        Me.BatterIdDataGridViewTextBoxColumn.HeaderText = "BatterId"
-        Me.BatterIdDataGridViewTextBoxColumn.Name = "BatterIdDataGridViewTextBoxColumn"
-        '
-        'BatteryNameDataGridViewTextBoxColumn
-        '
-        Me.BatteryNameDataGridViewTextBoxColumn.DataPropertyName = "BatteryName"
-        Me.BatteryNameDataGridViewTextBoxColumn.HeaderText = "BatteryName"
-        Me.BatteryNameDataGridViewTextBoxColumn.Name = "BatteryNameDataGridViewTextBoxColumn"
-        '
-        'BatteryTypeDataGridViewTextBoxColumn
-        '
-        Me.BatteryTypeDataGridViewTextBoxColumn.DataPropertyName = "BatteryType"
-        Me.BatteryTypeDataGridViewTextBoxColumn.HeaderText = "BatteryType"
-        Me.BatteryTypeDataGridViewTextBoxColumn.Name = "BatteryTypeDataGridViewTextBoxColumn"
-        '
-        'UnitPriceDataGridViewTextBoxColumn
-        '
-        Me.UnitPriceDataGridViewTextBoxColumn.DataPropertyName = "UnitPrice"
-        Me.UnitPriceDataGridViewTextBoxColumn.HeaderText = "UnitPrice"
-        Me.UnitPriceDataGridViewTextBoxColumn.Name = "UnitPriceDataGridViewTextBoxColumn"
-        '
-        'DateBoughtDataGridViewTextBoxColumn
-        '
-        Me.DateBoughtDataGridViewTextBoxColumn.DataPropertyName = "DateBought"
-        Me.DateBoughtDataGridViewTextBoxColumn.HeaderText = "DateBought"
-        Me.DateBoughtDataGridViewTextBoxColumn.Name = "DateBoughtDataGridViewTextBoxColumn"
-        '
-        'DateSoldDataGridViewTextBoxColumn
-        '
-        Me.DateSoldDataGridViewTextBoxColumn.DataPropertyName = "DateSold"
-        Me.DateSoldDataGridViewTextBoxColumn.HeaderText = "DateSold"
-        Me.DateSoldDataGridViewTextBoxColumn.Name = "DateSoldDataGridViewTextBoxColumn"
-        '
-        'QuantityDataGridViewTextBoxColumn
-        '
-        Me.QuantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity"
-        Me.QuantityDataGridViewTextBoxColumn.HeaderText = "Quantity"
-        Me.QuantityDataGridViewTextBoxColumn.Name = "QuantityDataGridViewTextBoxColumn"
-        '
-        'PackageNumberDataGridViewTextBoxColumn
-        '
-        Me.PackageNumberDataGridViewTextBoxColumn.DataPropertyName = "PackageNumber"
-        Me.PackageNumberDataGridViewTextBoxColumn.HeaderText = "PackageNumber"
-        Me.PackageNumberDataGridViewTextBoxColumn.Name = "PackageNumberDataGridViewTextBoxColumn"
+        Me.Project1TableAdapter.ClearBeforeFill = True
         '
         'Form5
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.Red
-        Me.ClientSize = New System.Drawing.Size(638, 494)
+        Me.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ClientSize = New System.Drawing.Size(966, 494)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.Button9)
@@ -309,14 +319,15 @@ Partial Class Form5
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.GroupBox1)
+        Me.MaximumSize = New System.Drawing.Size(982, 533)
         Me.Name = "Form5"
         Me.GroupBox1.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Project1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me._project__1_DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me._project__1_DataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ProjectBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -338,8 +349,8 @@ Partial Class Form5
     Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents _project__1_DataSet As _project__1_DataSet
-    Friend WithEvents ProjectBindingSource As BindingSource
-    Friend WithEvents ProjectTableAdapter As _project__1_DataSetTableAdapters.projectTableAdapter
+    Friend WithEvents Project1BindingSource As BindingSource
+    Friend WithEvents Project1TableAdapter As _project__1_DataSetTableAdapters.project1TableAdapter
     Friend WithEvents IDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents BatterIdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents BatteryNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn

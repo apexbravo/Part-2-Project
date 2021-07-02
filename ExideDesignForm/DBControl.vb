@@ -1,0 +1,4 @@
+﻿
+Class DBControl
+
+End Class
