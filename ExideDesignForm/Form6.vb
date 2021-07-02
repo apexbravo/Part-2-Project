@@ -166,4 +166,9 @@ Public Class Form6
     Private Sub txtInput_TextChanged(sender As Object, e As EventArgs) Handles txtInput.TextChanged
 
     End Sub
+
+    Private Sub Form6_Closing(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles MyBase.Closing
+        Form3.Show()
+
+    End Sub
 End Class
