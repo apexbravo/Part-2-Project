@@ -364,8 +364,11 @@ Partial Class Form4
         '
         'Btnlogout
         '
+        Me.Btnlogout.AutoSize = True
         Me.Btnlogout.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btnlogout.Location = New System.Drawing.Point(623, 403)
+        Me.Btnlogout.MaximumSize = New System.Drawing.Size(75, 38)
+        Me.Btnlogout.MinimumSize = New System.Drawing.Size(75, 38)
         Me.Btnlogout.Name = "Btnlogout"
         Me.Btnlogout.Size = New System.Drawing.Size(75, 38)
         Me.Btnlogout.TabIndex = 10

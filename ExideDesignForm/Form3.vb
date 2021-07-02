@@ -44,4 +44,12 @@
         AboutBox1.Show()
 
     End Sub
+
+    Private Sub Form3_Closing(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles MyBase.Closing
+        If MessageBox.Show(" Are you sure you want to quit", "Are you sure?", MessageBoxButtons.YesNoCancel) <> DialogResult.Yes Then
+            e.Cancel = True
+        End If
+
+    End Sub
+
 End Class

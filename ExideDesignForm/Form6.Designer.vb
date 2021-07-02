@@ -25,13 +25,11 @@ Partial Class Form6
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form6))
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.txtQuatity = New System.Windows.Forms.TextBox()
         Me.txtAmount = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.txtProduct_ID = New System.Windows.Forms.TextBox()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.btnEnter = New System.Windows.Forms.Button()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
@@ -54,10 +52,10 @@ Partial Class Form6
         Me.txtInput = New System.Windows.Forms.TextBox()
         Me.Receipt = New System.Windows.Forms.TabControl()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.txtNumberOfItems = New System.Windows.Forms.TextBox()
-        Me.Label7 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.btnRemove = New System.Windows.Forms.Button()
+        Me.btnAddItem = New System.Windows.Forms.Button()
         Me.btnLogout = New System.Windows.Forms.Button()
         Me.btnMain = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
@@ -74,8 +72,10 @@ Partial Class Form6
         Me.Project1DataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me._project__1_DataSet = New ExideDesignForm._project__1_DataSet()
         Me.btnClear = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btncalculate = New System.Windows.Forms.Button()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.txtDueBalanceWithoutTax = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.txtChange = New System.Windows.Forms.TextBox()
         Me.txtTotal_Amount = New System.Windows.Forms.TextBox()
@@ -83,9 +83,7 @@ Partial Class Form6
         Me.txtTax = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.txtProduct_cost = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.txtDiscount = New System.Windows.Forms.TextBox()
+        Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.Project1TableAdapter = New ExideDesignForm._project__1_DataSetTableAdapters.project1TableAdapter()
         Me.GroupBox2.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -110,19 +108,10 @@ Partial Class Form6
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "SALES_FORM"
         '
-        'txtQuatity
-        '
-        Me.txtQuatity.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtQuatity.Location = New System.Drawing.Point(99, 66)
-        Me.txtQuatity.Multiline = True
-        Me.txtQuatity.Name = "txtQuatity"
-        Me.txtQuatity.Size = New System.Drawing.Size(177, 22)
-        Me.txtQuatity.TabIndex = 7
-        '
         'txtAmount
         '
         Me.txtAmount.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAmount.Location = New System.Drawing.Point(99, 100)
+        Me.txtAmount.Location = New System.Drawing.Point(103, 68)
         Me.txtAmount.Multiline = True
         Me.txtAmount.Name = "txtAmount"
         Me.txtAmount.Size = New System.Drawing.Size(177, 22)
@@ -132,7 +121,7 @@ Partial Class Form6
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(7, 108)
+        Me.Label4.Location = New System.Drawing.Point(7, 72)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(84, 16)
         Me.Label4.TabIndex = 5
@@ -142,47 +131,35 @@ Partial Class Form6
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(7, 69)
+        Me.Label3.Location = New System.Drawing.Point(7, 24)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(56, 16)
+        Me.Label3.Size = New System.Drawing.Size(94, 16)
         Me.Label3.TabIndex = 4
-        Me.Label3.Text = "Quantity"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(7, 30)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(74, 16)
-        Me.Label2.TabIndex = 3
-        Me.Label2.Text = "Product_ID"
+        Me.Label3.Text = "Battery_Name"
         '
         'GroupBox2
         '
         Me.GroupBox2.BackgroundImage = CType(resources.GetObject("GroupBox2.BackgroundImage"), System.Drawing.Image)
-        Me.GroupBox2.Controls.Add(Me.txtQuatity)
+        Me.GroupBox2.Controls.Add(Me.ComboBox1)
         Me.GroupBox2.Controls.Add(Me.txtAmount)
         Me.GroupBox2.Controls.Add(Me.Label4)
         Me.GroupBox2.Controls.Add(Me.Label3)
-        Me.GroupBox2.Controls.Add(Me.Label2)
-        Me.GroupBox2.Controls.Add(Me.txtProduct_ID)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.Location = New System.Drawing.Point(5, 15)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(286, 144)
+        Me.GroupBox2.Size = New System.Drawing.Size(286, 116)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Items"
         '
-        'txtProduct_ID
+        'ComboBox1
         '
-        Me.txtProduct_ID.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtProduct_ID.Location = New System.Drawing.Point(99, 30)
-        Me.txtProduct_ID.Multiline = True
-        Me.txtProduct_ID.Name = "txtProduct_ID"
-        Me.txtProduct_ID.Size = New System.Drawing.Size(177, 22)
-        Me.txtProduct_ID.TabIndex = 0
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"SLI Gel cel", "Li-ion Cobalt oxide", "SLI AGM", "Lead-Acid Flooded", "Li-ion Titanate"})
+        Me.ComboBox1.Location = New System.Drawing.Point(105, 23)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(177, 24)
+        Me.ComboBox1.TabIndex = 7
         '
         'TabPage2
         '
@@ -407,43 +384,26 @@ Partial Class Form6
         Me.GroupBox3.TabIndex = 2
         Me.GroupBox3.TabStop = False
         '
-        'txtNumberOfItems
-        '
-        Me.txtNumberOfItems.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNumberOfItems.Location = New System.Drawing.Point(110, 25)
-        Me.txtNumberOfItems.Multiline = True
-        Me.txtNumberOfItems.Name = "txtNumberOfItems"
-        Me.txtNumberOfItems.Size = New System.Drawing.Size(137, 22)
-        Me.txtNumberOfItems.TabIndex = 8
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(10, 64)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(60, 16)
-        Me.Label7.TabIndex = 10
-        Me.Label7.Text = "Discount"
-        '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(6, 28)
+        Me.Label5.Location = New System.Drawing.Point(95, 12)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(108, 16)
+        Me.Label5.Size = New System.Drawing.Size(77, 16)
         Me.Label5.TabIndex = 8
-        Me.Label5.Text = "Number of  items"
+        Me.Label5.Text = "List of items"
         '
         'GroupBox1
         '
         Me.GroupBox1.BackgroundImage = CType(resources.GetObject("GroupBox1.BackgroundImage"), System.Drawing.Image)
+        Me.GroupBox1.Controls.Add(Me.btnRemove)
+        Me.GroupBox1.Controls.Add(Me.btnAddItem)
         Me.GroupBox1.Controls.Add(Me.btnLogout)
         Me.GroupBox1.Controls.Add(Me.btnMain)
         Me.GroupBox1.Controls.Add(Me.DataGridView1)
         Me.GroupBox1.Controls.Add(Me.btnClear)
-        Me.GroupBox1.Controls.Add(Me.Button2)
+        Me.GroupBox1.Controls.Add(Me.btncalculate)
         Me.GroupBox1.Controls.Add(Me.GroupBox5)
         Me.GroupBox1.Controls.Add(Me.GroupBox4)
         Me.GroupBox1.Controls.Add(Me.GroupBox3)
@@ -454,10 +414,30 @@ Partial Class Form6
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
         '
+        'btnRemove
+        '
+        Me.btnRemove.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnRemove.Location = New System.Drawing.Point(414, 254)
+        Me.btnRemove.Name = "btnRemove"
+        Me.btnRemove.Size = New System.Drawing.Size(80, 43)
+        Me.btnRemove.TabIndex = 12
+        Me.btnRemove.Text = "Remove"
+        Me.btnRemove.UseVisualStyleBackColor = True
+        '
+        'btnAddItem
+        '
+        Me.btnAddItem.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAddItem.Location = New System.Drawing.Point(352, 254)
+        Me.btnAddItem.Name = "btnAddItem"
+        Me.btnAddItem.Size = New System.Drawing.Size(61, 43)
+        Me.btnAddItem.TabIndex = 11
+        Me.btnAddItem.Text = "Add"
+        Me.btnAddItem.UseVisualStyleBackColor = True
+        '
         'btnLogout
         '
         Me.btnLogout.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogout.Location = New System.Drawing.Point(681, 406)
+        Me.btnLogout.Location = New System.Drawing.Point(773, 406)
         Me.btnLogout.Name = "btnLogout"
         Me.btnLogout.Size = New System.Drawing.Size(93, 48)
         Me.btnLogout.TabIndex = 10
@@ -467,7 +447,7 @@ Partial Class Form6
         'btnMain
         '
         Me.btnMain.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnMain.Location = New System.Drawing.Point(584, 405)
+        Me.btnMain.Location = New System.Drawing.Point(671, 405)
         Me.btnMain.Name = "btnMain"
         Me.btnMain.Size = New System.Drawing.Size(91, 48)
         Me.btnMain.TabIndex = 9
@@ -481,9 +461,9 @@ Partial Class Form6
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IDDataGridViewTextBoxColumn, Me.BatterIdDataGridViewTextBoxColumn, Me.BatteryNameDataGridViewTextBoxColumn, Me.BatteryTypeDataGridViewTextBoxColumn, Me.UnitPriceDataGridViewTextBoxColumn, Me.DateBoughtDataGridViewTextBoxColumn, Me.DateSoldDataGridViewTextBoxColumn, Me.QuantityDataGridViewTextBoxColumn, Me.PackageNumberDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.Project1BindingSource
-        Me.DataGridView1.Location = New System.Drawing.Point(25, 309)
+        Me.DataGridView1.Location = New System.Drawing.Point(9, 309)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(563, 150)
+        Me.DataGridView1.Size = New System.Drawing.Size(570, 150)
         Me.DataGridView1.TabIndex = 8
         '
         'IDDataGridViewTextBoxColumn
@@ -558,44 +538,65 @@ Partial Class Form6
         'btnClear
         '
         Me.btnClear.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnClear.Location = New System.Drawing.Point(317, 178)
+        Me.btnClear.Location = New System.Drawing.Point(293, 253)
         Me.btnClear.Name = "btnClear"
-        Me.btnClear.Size = New System.Drawing.Size(243, 43)
+        Me.btnClear.Size = New System.Drawing.Size(57, 43)
         Me.btnClear.TabIndex = 7
         Me.btnClear.Text = "Clear"
         Me.btnClear.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btncalculate
         '
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(317, 244)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(243, 43)
-        Me.Button2.TabIndex = 6
-        Me.Button2.Text = "Calculate"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btncalculate.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btncalculate.Location = New System.Drawing.Point(495, 254)
+        Me.btncalculate.Name = "btncalculate"
+        Me.btncalculate.Size = New System.Drawing.Size(88, 43)
+        Me.btncalculate.TabIndex = 6
+        Me.btncalculate.Text = "Calculate"
+        Me.btncalculate.UseVisualStyleBackColor = True
         '
         'GroupBox5
         '
         Me.GroupBox5.BackgroundImage = CType(resources.GetObject("GroupBox5.BackgroundImage"), System.Drawing.Image)
+        Me.GroupBox5.Controls.Add(Me.txtDueBalanceWithoutTax)
+        Me.GroupBox5.Controls.Add(Me.Label2)
         Me.GroupBox5.Controls.Add(Me.Label10)
         Me.GroupBox5.Controls.Add(Me.txtChange)
         Me.GroupBox5.Controls.Add(Me.txtTotal_Amount)
         Me.GroupBox5.Controls.Add(Me.Label9)
         Me.GroupBox5.Controls.Add(Me.txtTax)
         Me.GroupBox5.Controls.Add(Me.Label8)
-        Me.GroupBox5.Location = New System.Drawing.Point(10, 174)
+        Me.GroupBox5.Location = New System.Drawing.Point(10, 137)
         Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Size = New System.Drawing.Size(281, 125)
+        Me.GroupBox5.Size = New System.Drawing.Size(281, 162)
         Me.GroupBox5.TabIndex = 4
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "Total Cost"
+        '
+        'txtDueBalanceWithoutTax
+        '
+        Me.txtDueBalanceWithoutTax.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDueBalanceWithoutTax.Location = New System.Drawing.Point(169, 25)
+        Me.txtDueBalanceWithoutTax.Multiline = True
+        Me.txtDueBalanceWithoutTax.Name = "txtDueBalanceWithoutTax"
+        Me.txtDueBalanceWithoutTax.Size = New System.Drawing.Size(102, 22)
+        Me.txtDueBalanceWithoutTax.TabIndex = 19
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(6, 25)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(157, 16)
+        Me.Label2.TabIndex = 18
+        Me.Label2.Text = "Due_Balance Without tax"
         '
         'Label10
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(6, 93)
+        Me.Label10.Location = New System.Drawing.Point(6, 131)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(55, 16)
         Me.Label10.TabIndex = 17
@@ -604,7 +605,7 @@ Partial Class Form6
         'txtChange
         '
         Me.txtChange.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtChange.Location = New System.Drawing.Point(94, 90)
+        Me.txtChange.Location = New System.Drawing.Point(94, 127)
         Me.txtChange.Multiline = True
         Me.txtChange.Name = "txtChange"
         Me.txtChange.Size = New System.Drawing.Size(177, 22)
@@ -613,7 +614,7 @@ Partial Class Form6
         'txtTotal_Amount
         '
         Me.txtTotal_Amount.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTotal_Amount.Location = New System.Drawing.Point(94, 59)
+        Me.txtTotal_Amount.Location = New System.Drawing.Point(94, 95)
         Me.txtTotal_Amount.Multiline = True
         Me.txtTotal_Amount.Name = "txtTotal_Amount"
         Me.txtTotal_Amount.Size = New System.Drawing.Size(177, 22)
@@ -623,16 +624,16 @@ Partial Class Form6
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(6, 61)
+        Me.Label9.Location = New System.Drawing.Point(3, 100)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(87, 16)
+        Me.Label9.Size = New System.Drawing.Size(86, 16)
         Me.Label9.TabIndex = 14
-        Me.Label9.Text = "Total Amount"
+        Me.Label9.Text = "Due Balance"
         '
         'txtTax
         '
         Me.txtTax.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTax.Location = New System.Drawing.Point(94, 25)
+        Me.txtTax.Location = New System.Drawing.Point(94, 58)
         Me.txtTax.Multiline = True
         Me.txtTax.Name = "txtTax"
         Me.txtTax.Size = New System.Drawing.Size(177, 22)
@@ -642,7 +643,7 @@ Partial Class Form6
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(6, 28)
+        Me.Label8.Location = New System.Drawing.Point(6, 61)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(31, 16)
         Me.Label8.TabIndex = 8
@@ -651,47 +652,24 @@ Partial Class Form6
         'GroupBox4
         '
         Me.GroupBox4.BackgroundImage = CType(resources.GetObject("GroupBox4.BackgroundImage"), System.Drawing.Image)
-        Me.GroupBox4.Controls.Add(Me.txtProduct_cost)
-        Me.GroupBox4.Controls.Add(Me.Label6)
-        Me.GroupBox4.Controls.Add(Me.txtDiscount)
-        Me.GroupBox4.Controls.Add(Me.txtNumberOfItems)
-        Me.GroupBox4.Controls.Add(Me.Label7)
+        Me.GroupBox4.Controls.Add(Me.ListBox1)
         Me.GroupBox4.Controls.Add(Me.Label5)
         Me.GroupBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox4.Location = New System.Drawing.Point(308, 20)
+        Me.GroupBox4.Location = New System.Drawing.Point(293, 20)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(270, 139)
+        Me.GroupBox4.Size = New System.Drawing.Size(285, 227)
         Me.GroupBox4.TabIndex = 3
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Pricing"
         '
-        'txtProduct_cost
+        'ListBox1
         '
-        Me.txtProduct_cost.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtProduct_cost.Location = New System.Drawing.Point(110, 95)
-        Me.txtProduct_cost.Multiline = True
-        Me.txtProduct_cost.Name = "txtProduct_cost"
-        Me.txtProduct_cost.Size = New System.Drawing.Size(137, 22)
-        Me.txtProduct_cost.TabIndex = 12
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(10, 98)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(82, 16)
-        Me.Label6.TabIndex = 8
-        Me.Label6.Text = "Product cost"
-        '
-        'txtDiscount
-        '
-        Me.txtDiscount.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDiscount.Location = New System.Drawing.Point(110, 61)
-        Me.txtDiscount.Multiline = True
-        Me.txtDiscount.Name = "txtDiscount"
-        Me.txtDiscount.Size = New System.Drawing.Size(137, 22)
-        Me.txtDiscount.TabIndex = 11
+        Me.ListBox1.FormattingEnabled = True
+        Me.ListBox1.ItemHeight = 16
+        Me.ListBox1.Location = New System.Drawing.Point(0, 45)
+        Me.ListBox1.Name = "ListBox1"
+        Me.ListBox1.Size = New System.Drawing.Size(285, 180)
+        Me.ListBox1.TabIndex = 9
         '
         'Project1TableAdapter
         '
@@ -726,13 +704,10 @@ Partial Class Form6
 
     End Sub
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents txtQuatity As System.Windows.Forms.TextBox
     Friend WithEvents txtAmount As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
-    Friend WithEvents txtProduct_ID As System.Windows.Forms.TextBox
     Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
     Friend WithEvents btnEnter As System.Windows.Forms.Button
     Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
@@ -755,15 +730,13 @@ Partial Class Form6
     Friend WithEvents txtInput As System.Windows.Forms.TextBox
     Friend WithEvents Receipt As System.Windows.Forms.TabControl
     Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
-    Friend WithEvents txtNumberOfItems As System.Windows.Forms.TextBox
-    Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents btnLogout As System.Windows.Forms.Button
     Friend WithEvents btnMain As System.Windows.Forms.Button
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
     Friend WithEvents btnClear As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents btncalculate As System.Windows.Forms.Button
     Friend WithEvents GroupBox5 As System.Windows.Forms.GroupBox
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents txtChange As System.Windows.Forms.TextBox
@@ -772,9 +745,6 @@ Partial Class Form6
     Friend WithEvents txtTax As System.Windows.Forms.TextBox
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents GroupBox4 As System.Windows.Forms.GroupBox
-    Friend WithEvents txtProduct_cost As System.Windows.Forms.TextBox
-    Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents txtDiscount As System.Windows.Forms.TextBox
     Friend WithEvents Project1DataSetBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents _project__1_DataSet As ExideDesignForm._project__1_DataSet
     Friend WithEvents Project1BindingSource As System.Windows.Forms.BindingSource
@@ -788,4 +758,10 @@ Partial Class Form6
     Friend WithEvents DateSoldDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents QuantityDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents PackageNumberDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents btnAddItem As System.Windows.Forms.Button
+    Friend WithEvents ListBox1 As System.Windows.Forms.ListBox
+    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents btnRemove As System.Windows.Forms.Button
+    Friend WithEvents txtDueBalanceWithoutTax As System.Windows.Forms.TextBox
+    Friend WithEvents Label2 As System.Windows.Forms.Label
 End Class

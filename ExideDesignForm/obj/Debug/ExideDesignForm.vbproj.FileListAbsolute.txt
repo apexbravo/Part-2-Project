@@ -92,3 +92,7 @@ C:\Users\Apxb\source\repos\Part-2-Project\ExideDesignForm\obj\Debug\ExideDesignF
 C:\Users\Apxb\source\repos\Part-2-Project\ExideDesignForm\obj\Debug\ExideDesignForm.xml
 C:\Users\Apxb\source\repos\Part-2-Project\ExideDesignForm\obj\Debug\ExideDesignForm.pdb
 C:\Users\Apxb\source\repos\Part-2-Project\ExideDesignForm\obj\Debug\ExideDesignForm.AboutBox1.resources
+C:\Users\Apxb\source\repos\Part-2-Project\ExideDesignForm\bin\Debug\ExideDesignForm.exe.manifest
+C:\Users\Apxb\source\repos\Part-2-Project\ExideDesignForm\bin\Debug\ExideDesignForm.application
+C:\Users\Apxb\source\repos\Part-2-Project\ExideDesignForm\obj\Debug\ExideDesignForm.exe.manifest
+C:\Users\Apxb\source\repos\Part-2-Project\ExideDesignForm\obj\Debug\ExideDesignForm.application

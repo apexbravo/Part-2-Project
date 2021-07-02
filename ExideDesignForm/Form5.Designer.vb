@@ -52,6 +52,7 @@ Partial Class Form5
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Project1TableAdapter = New ExideDesignForm._project__1_DataSetTableAdapters.project1TableAdapter()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Project1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -296,6 +297,15 @@ Partial Class Form5
         '
         Me.Project1TableAdapter.ClearBeforeFill = True
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(656, 394)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(157, 13)
+        Me.Label2.TabIndex = 18
+        Me.Label2.Text = "You search using the Battery ID"
+        '
         'Form5
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -304,6 +314,7 @@ Partial Class Form5
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(966, 494)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.Button9)
@@ -360,4 +371,5 @@ Partial Class Form5
     Friend WithEvents DateSoldDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents QuantityDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents PackageNumberDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents Label2 As Label
 End Class

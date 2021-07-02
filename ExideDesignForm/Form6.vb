@@ -9,14 +9,15 @@ Public Class Form6
 
     Dim hasDecimal As Boolean
     Dim tmpValue As Double
+    Dim batter_name As String
+    Dim DueBalance, Amount_Paid, New_DueBalance As Double
+    Dim amount As Double
+
 
     Private Sub Form6_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the '_project__1_DataSet.project1' table. You can move, or remove it, as needed.
         Me.Project1TableAdapter.Fill(Me._project__1_DataSet.project1)
-
-    End Sub
-
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        txtTax.Text = "3%"
 
     End Sub
 
@@ -24,15 +25,9 @@ Public Class Form6
         txtAmount.Text = ""
         txtInput.Text = 0
         txtChange.Text = ""
-        txtDiscount.Text = ""
-        txtNumberOfItems.Text = ""
-        txtProduct_cost.Text = ""
-        txtProduct_ID.Text = ""
-        txtQuatity.Text = ""
-        txtTax.Text = "3%"
         txtTotal_Amount.Text = ""
-
-
+        ListBox1.Items.Clear()
+        amount = 0
     End Sub
 
 
@@ -56,7 +51,6 @@ Public Class Form6
                 Finally
                     txtInput.Text = Result.ToString()
 
-
                 End Try
 
             Case "x"
@@ -64,9 +58,6 @@ Public Class Form6
                 txtInput.Text = Result.ToString()
 
         End Select
-
-
-
     End Sub
 
     'for the Decimal
@@ -159,7 +150,10 @@ Public Class Form6
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
         Dim result = MessageBox.Show("Are you sure you want to logout", "closing exams", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
         If result = (DialogResult.Yes) Then
-            Application.Exit()
+            Me.Close()
+            Form3.Show()
+
+
         End If
     End Sub
 
@@ -167,8 +161,52 @@ Public Class Form6
 
     End Sub
 
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles btnAddItem.Click
+
+        batter_name = ComboBox1.Text
+        ListBox1.Items.Add(batter_name)
+
+        If (ListBox1.Items.Contains("SLI Gel cel")) Then
+            amount = amount + 180.0
+        ElseIf (ListBox1.Items.Contains("Li-ion Cobalt oxide")) Then
+            amount = amount + 360.0
+        ElseIf (ListBox1.Items.Contains("SLI AGM")) Then
+            amount = amount + 180.0
+        ElseIf (ListBox1.Items.Contains("Lead-Acid Flooded")) Then
+            amount = amount + 120.0
+        Else
+            amount = amount + 360.0
+        End If
+
+        txtDueBalanceWithoutTax.Text = amount
+        DueBalance = amount + (0.03 * amount)
+        txtTotal_Amount.Text = DueBalance
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btncalculate.Click
+
+
+        If txtAmount.Text = "" Then
+            MessageBox.Show("Please enter the amount of money paid by the customer", "closing exams", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End If
+        Amount_Paid = txtAmount.Text
+        If Amount_Paid < DueBalance Then
+            MessageBox.Show("The amount paid by the customer is less than the total purchasing price", "closing exams", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            txtChange.Text = ""
+        Else
+
+            txtChange.Text = Amount_Paid - DueBalance
+        End If
+
+    End Sub
+
+    Private Sub btnRemove_Click(sender As Object, e As EventArgs) Handles btnRemove.Click
+        ListBox1.Items.Remove(batter_name)
+    End Sub
+
     Private Sub Form6_Closing(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles MyBase.Closing
         Form3.Show()
 
     End Sub
+
 End Class

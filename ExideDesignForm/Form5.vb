@@ -112,6 +112,10 @@ Public Class Form5
 
     End Sub
 
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+
+    End Sub
+
     Private Sub refresher()
         Dim access As String
 
